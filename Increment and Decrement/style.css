@@ -1,8 +1,10 @@
+body{
+    background-color: rgb(10, 170, 151);
+}
 
 #wrapper{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(10, 170, 151);
     display: flex;
     flex-direction: column;
     justify-content: center;
