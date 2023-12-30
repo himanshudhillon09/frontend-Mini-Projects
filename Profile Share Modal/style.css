@@ -1,5 +1,7 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .wrapper {
   position: relative;
@@ -21,59 +23,238 @@ body{
   background-color: rgb(243, 52, 52);
   box-shadow: 0 0 15px 5px #e78267;
   z-index: -1;
-  animation: ele1move 3s linear both infinite alternate ;
+  animation: ele1move 3s linear both infinite alternate;
 }
 
 .container {
-    margin: 6rem;
-    display: flex;
-    width: 350px;
-    background-color: rgb(69, 63, 63);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    border-radius: 1rem;
-    z-index: 0;
-    opacity: 90%;
+  margin: 4rem;
+  display: flex;
+  width: 350px;
+  background-color: #ffffff1a;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  z-index: 0;
 }
 
-.profile-img{
+.profile-img {
   background: url(images/dp.jpg);
   height: 200px;
   width: 200px;
   margin-top: 2rem;
-  border-radius:100% ; 
-  background-size : cover;
+  border-radius: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
 }
 
-.responsive-links{
+.responsive-links {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   padding: 2rem;
 }
-
 
 .floating-ele2 {
   position: absolute;
   top: 75%;
   right: 30%;
-    height: 200px;
-    width: 200px;
-    border-radius: 100%;
-    background-color: rgb(25, 36, 242);
-    box-shadow: 0 0 15px 5px #556df6;
-    z-index: -1;
-    animation: ele2move 3s both infinite alternate ;
-  }
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background-color: rgb(25, 36, 242);
+  box-shadow: 0 0 15px 5px #556df6;
+  z-index: -1;
+  animation: ele2move 3s both infinite alternate;
+}
 
-  @keyframes ele1move{
-    from{left: 30%;}
-    to{transform: translateX(50px);}
+@keyframes ele1move {
+  from {
+    left: 30%;
   }
-  @keyframes ele2move{
-    from{right: 30%;}
-    to{transform: translateX(-50px);}
+  to {
+    transform: translateX(50px);
   }
+}
+@keyframes ele2move {
+  from {
+    right: 30%;
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
+
+button {
+  color: #ffffffb9;
+  border: 2px solid #ffffffb9;
+  background: #ffffff00;
+  border-radius: 4px;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #ada618;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 2rem;
+  color: white;
+  font-weight: 300;
+}
+
+.info {
+  font-size: 1rem;
+  color: white;
+  font-weight: lighter;
+}
+
+.modal-container {
+  top: 30%;
+  left: 35%;
+  color: white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff59;
+  width: 500px;
+  scale: 0;
+  background: #00000088;
+  padding: 20px 25px;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  gap: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  padding: 0 2rem;
+}
+
+.share-my-profile {
+  font-size: 2rem;
+}
+
+hr {
+  margin-top: -2rem;
+  width: 90%;
+}
+
+.share-via {
+  font-size: 2rem;
+}
+
+.social-handles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-handles i {
+  font-size: 2rem;
+}
+
+ .close :hover {
+  cursor: pointer;
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a  :hover{
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+#facebook {
+  color: #1771e6;
+  border: 1px solid #1771e6;
+}
+#facebook:hover {
+  background-color: #1771e6;
+  color: #fff;
+}
+
+#twitter {
+  color: #1c99e6;
+  border: 1px solid #1c99e6;
+}
+#twitter:hover {
+  background-color: #1c99e6;
+  color: #fff;
+}
+
+#instagram {
+  color: #cb2770;
+  border: 1px solid #cb2770;
+}
+#instagram:hover {
+  background-color: #cb2770;
+  color: #fff;
+}
+
+#whatsapp {
+  color: #2fe664;
+  border: 1px solid #2fe664;
+}
+#whatsapp:hover {
+  background-color: #2fe664;
+  color: #fff;
+}
+
+#telegram {
+  color: #0081c2;
+  border: 1px solid #0081c2;
+}
+#telegram:hover {
+  background-color: #0081c2;
+  color: #fff;
+}
+
+
+
+.active {
+  scale: 1;
+}
+
+.overlay {
+  position: fixed;
+  background-color: #5f5f5f83;
+  top: 0;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+}
+
+.overlayActive {
+  opacity: 1;
+  pointer-events: initial;
+}

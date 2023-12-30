@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Share Modal</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="floating-ele1"></div>
-        <div class="container">
-            <div class="profile-img"></div>
-            <div class="name">Himanshu Dhillon</div>
-            <div class="info">UIET, Panjab University</div>
-            <div class="responsive-links">
-                <button class="share-profile"><i class="fa-solid fa-share"></i> Share My Profile</button>
-                <button class="follow-profile"> Follow Me</button>
-            </div>
+      <div class="floating-ele1"></div>
+      <div class="container">
+        <div class="profile-img"></div>
+        <div class="name">Himanshu Dhillon</div>
+        <div class="info">Software Developer</div>
+        <div class="responsive-links">
+          <button class="share-profile" onclick="openModal()">
+            <i class="fa-solid fa-share" ></i> Share My Profile
+          </button>
+          <button class="follow-profile"><a href="https://www.linkedin.com/in/himanshu095/">Follow Me</a></button>
         </div>
-        <div class="floating-ele2"></div>
+      </div>
+      <div class="floating-ele2"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-container">
+      <div class="header">
+        <div class="share-my-profile">Share My Profile</div>
+        <div class="close"><i onclick="closeModal()" class="fa-regular fa-x"></i></div>
+      </div>
+      <hr />
+      <div class="share-via">Share Via</div>
+      <div class="social-handles">
+        <a href="https://www.facebook.com" class="icon" id="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/himanshu09052" class="icon" id="twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/himanshu_095/" class="icon" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://web.whatsapp.com/" class="icon" id="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://web.telegram.org" class="icon" id="telegram"><i class="fa-brands fa-telegram"></i></a>
+      </div>
     </div>
 
 
+    <!-- overlay -->
+    <div class="overlay" onclick="closeModal()"></div>
 
 
 
+
+
+    <!-- Script and Font Awesome -->
     <script
       src="https://kit.fontawesome.com/0f7e109f05.js"
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
